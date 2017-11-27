@@ -141,9 +141,7 @@ void draw() {
   }
   
  
- background(0);
-
-  // Hero movement Y-axis
+   // Hero movement Y-axis
   HeldY = HeldY + HeldVY/frameRate;
   //Hero cannot leave screen
   if (HeldY<0) {
