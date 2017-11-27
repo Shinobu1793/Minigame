@@ -72,6 +72,18 @@ void keyPressed() {
     }
   }
  }
+ 
+ void keyReleased() {
+  if (keyCode==UP) {
+    HeldVY = 0;
+  } else if (keyCode==DOWN) {
+    HeldVY = 0;
+  } else if (keyCode==LEFT) {
+    HeldVX=0;
+  } else if (keyCode==RIGHT) {
+    HeldVX=0;
+  }
+}
 
 //Startscreen
 void draw() {
@@ -130,21 +142,8 @@ void draw() {
   }
 }
 
-void keyReleased() {
-  if (keyCode==UP) {
-    HeldVY = 0;
-  } else if (keyCode==DOWN) {
-    HeldVY = 0;
-  } else if (keyCode==LEFT) {
-    HeldVX=0;
-  } else if (keyCode==RIGHT) {
-    HeldVX=0;
-  }
-}
 
-
-void draw () {
-  background(0);
+ background(0);
 
   // Hero movement Y-axis
   HeldY = HeldY + HeldVY/frameRate;
