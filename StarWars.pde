@@ -71,6 +71,16 @@ void keyPressed() {
       } else if (gameState==GAMEOVER) gameState = START;
     }
   }
+    // Movement of Hero with arrow keys 
+  if (keyCode==UP) {
+    HeldVY = -HeldSpeedY;
+  } else if (keyCode==DOWN) {
+    HeldVY = +HeldSpeedY;
+  } else if (keyCode==LEFT) {
+    HeldVX= -HeldSpeedX;
+  } else if (keyCode==RIGHT) {
+    HeldVX= +HeldSpeedX;
+  }
  }
  
  void keyReleased() {
@@ -130,19 +140,7 @@ void draw() {
     text("Game over", width/2, height/2);
   }
   
-   // Movement of Hero with arrow keys 
-  if (keyCode==UP) {
-    HeldVY = -HeldSpeedY;
-  } else if (keyCode==DOWN) {
-    HeldVY = +HeldSpeedY;
-  } else if (keyCode==LEFT) {
-    HeldVX= -HeldSpeedX;
-  } else if (keyCode==RIGHT) {
-    HeldVX= +HeldSpeedX;
-  }
-}
-
-
+ 
  background(0);
 
   // Hero movement Y-axis
@@ -250,4 +248,4 @@ void draw() {
   fill (255);
   ellipse (HeldX, HeldY, HeldW, HeldH);
 }
-}
+
