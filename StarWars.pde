@@ -119,6 +119,13 @@ void draw() {
     fill(255, 25, 25);
     textAlign(CENTER, TOP);
     text("Before you beat the HighScore:", 450, 50);
+    textSize(30);
+    fill (255, 0, 0);
+    ellipse (100,200,25,50);
+    text("Left mouse click", 125,250);
+    fill (0, 255, 0);
+    ellipse (800,200,25,50);
+    text("Right mouse click", 775,250);
   }
   //InGame
   if (gameState==GAME) {
