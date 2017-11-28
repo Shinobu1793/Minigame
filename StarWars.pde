@@ -1,7 +1,7 @@
 PImage img;
 PImage game;
 PFont ard;
-int score;
+int score = 0;
 int START = 1, STARTONE = 2, GAME = 3, GAMEOVER = 4;
 int gameState = START;
 
@@ -216,6 +216,7 @@ void draw() {
     {// make opponent 1 diasappear
       Gegner1H = 0;
       Gegner1W=0;
+      score = score + 1;
     }
 
   // opponent 2 is beaten by Hero by clicking right mouse button
@@ -226,6 +227,7 @@ void draw() {
     {// make opponent 2 disappear
       Gegner2H = 0;
       Gegner2W=0;
+      score = score + 1;
     }
 
 
